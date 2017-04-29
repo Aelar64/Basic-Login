@@ -1,0 +1,27 @@
+#include <iostream>
+#include <stream>
+
+using namespace std;
+
+int main (void) {
+
+  string Username = "";
+  string Password = "";
+  
+  bool userSuccess = false;
+  
+  cout << "Username: \n\n";
+  cin >> Username;
+  cout << "Password: \n\n";
+  cin >> Password;
+  
+  if (Username == "Marshal" && Password == "1234") {
+      cout << "Access granted.\nWelcome, " << Username << ".";
+      userSuccess = true;
+      }
+  else{
+        cout << "Incorrect credidentials. Please try again. \n\n ";
+        }
+        while(!userSuccess)
+        return 0;
+        }

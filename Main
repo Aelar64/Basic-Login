@@ -1,27 +1,35 @@
+#include "stdafx.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-int main (void) {
+int main()
+{
+	string username;
+	string password;
 
-  string Username = "";
-  string Password = "";
-  
-  bool userSuccess = false;
-  
-  cout << "Username: \n\n";
-  cin >> Username;
-  cout << "Password: \n\n";
-  cin >> Password;
-  
-  if (Username == "Marshal" && Password == "1234") {
-      cout << "Access granted.\nWelcome, " << Username << ".";
-      userSuccess = true;
-      }
-  else{
-        cout << "Incorrect credidentials. Please try again. \n\n ";
-        }
-        while(!userSuccess)
-        return 0;
-        }
+	bool userSuccess = false;
+
+	cout << "Names and Passwords are key-sensitive!\n\n";
+
+	cout << "Username: ";
+	cin >> username;
+	cout << "\n\n";
+	cout << "Password: ";
+	cin >> password;
+	cout << "\n\n";
+
+	if(username == "Name" && password == "Pass")
+	{
+		cout << "Correct login. Welcome, " << username << "." << endl << endl;
+		userSuccess = true;
+		system("pause");
+	}
+	else {
+		cout << "Incorrect credidentials. Please try again another time.\n\n";
+		system("pause");
+	}while (userSuccess == false)
+    return 0;
+}
+
